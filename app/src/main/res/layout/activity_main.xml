@@ -20,7 +20,7 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:textColor="#005EFF"
-        android:text="BATHI, NTSHINGA"/>
+        android:text="REGISTRATION APP"/>
 
     <TextView
         android:layout_width="match_parent"
