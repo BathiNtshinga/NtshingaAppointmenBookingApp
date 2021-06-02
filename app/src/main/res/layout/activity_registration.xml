@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegistrationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#005EFF"
+        android:text="BATHI, NTSHINGA"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        android:textColor="#FF070F"
+        android:text="Receptionist Registration"
+        android:gravity="top|center"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        android:inputType="text"
+        android:hint="Input Receptionist Name"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        android:inputType="number"
+        android:hint="Input Age"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/salary"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        android:inputType="numberDecimal"
+        android:hint="Input Salary"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        android:inputType="textEmailAddress"
+        android:hint="Input Email id"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password1"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        android:inputType="textPassword"
+        android:hint="Input Password"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:text="Login"
+        android:textSize="24dp"
+        android:textColor="#FF070F"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveInfo"
+        android:text="Register Receptionist"
+        android:textSize="24dp"
+        android:textColor="#FF5722"/>
+
+</LinearLayout>
