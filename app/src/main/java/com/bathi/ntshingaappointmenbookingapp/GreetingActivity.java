@@ -16,6 +16,6 @@ public class GreetingActivity extends AppCompatActivity {
         name123=(TextView)findViewById(R.id.name123);
         Bundle b = getIntent().getExtras();
         String name=b.getString("name");
-        name123.setText("Mr/Ms. "+name);
+        name123.setText("Mr. /Ms. "+name);
     }
 }

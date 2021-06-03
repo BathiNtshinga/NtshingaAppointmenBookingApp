@@ -46,7 +46,7 @@ static myDatabase myDB;
             pass.setText("");
         }
     }
-
+//login for Receptionist Registration
     public void register (View v){
         Intent i = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i);
