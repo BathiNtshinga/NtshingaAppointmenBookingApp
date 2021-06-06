@@ -42,7 +42,7 @@ public class RegistrationActivity extends AppCompatActivity {
         }
         else{
             AlertDialog.Builder ad = new AlertDialog.Builder(this);
-            ad.setMessage("Error in Input File");
+            ad.setMessage("Username Already Exists");
             ad.show();
         }
         ed5.setText("");

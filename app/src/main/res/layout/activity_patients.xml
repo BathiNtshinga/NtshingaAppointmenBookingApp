@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:layout_height="match_parent"
+    tools:context="com.bathi.ntshingaappointmenbookingapp.PatientsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patients Screen"
+        android:id="@+id/name123"
+        android:paddingTop="15dp"
+
+        android:textSize="29sp"
+        android:textStyle="italic|bold"
+        android:textColor="#090988"
+        android:gravity="top|center"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Patient Booking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Patient Booking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Patient Booking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Patient Booking"
+            android:paddingTop="17sp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FF070F"
+            />
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#FF070F"
+        />
+
+</LinearLayout>
