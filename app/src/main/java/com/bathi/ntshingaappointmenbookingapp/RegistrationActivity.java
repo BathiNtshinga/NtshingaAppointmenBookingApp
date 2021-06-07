@@ -31,21 +31,28 @@ public class RegistrationActivity extends AppCompatActivity {
         float salary = Float.parseFloat(ed3.getText().toString().trim());
         String email=ed4.getText().toString().trim();
         String pass= ed5.getText().toString().trim();
-        boolean result= MainActivity.myDB.insertData(name,age,salary,email,pass);
+        if(name.equals("")||age<1||salary<1|| email.equals("")||pass.equals(""))
+        {
+            Toast.makeText(getApplicationContext(), "All Entries are Mandatory...",Toast.LENGTH_LONG).show();
 
-        if(result) {
-            Toast.makeText(RegistrationActivity.this, name + " Register Success", Toast.LENGTH_LONG).show();
-            ed1.setText("");
-            ed2.setText("");
-            ed3.setText("");
-            ed4.setText("");
+        }else {
+
+            boolean result = MainActivity.myDB.insertData(name, age, salary, email, pass);
+
+            if (result) {
+                Toast.makeText(RegistrationActivity.this, name + " Register Success", Toast.LENGTH_LONG).show();
+                ed1.setText("");
+                ed2.setText("");
+                ed3.setText("");
+                ed4.setText("");
+            } else {
+                AlertDialog.Builder ad = new AlertDialog.Builder(this);
+                ad.setMessage("Username Already Exists");
+                ad.show();
+            }
+            ed5.setText("");
+
         }
-        else{
-            AlertDialog.Builder ad = new AlertDialog.Builder(this);
-            ad.setMessage("Username Already Exists");
-            ad.show();
-        }
-        ed5.setText("");
     }
 
     public void goBack(View v){

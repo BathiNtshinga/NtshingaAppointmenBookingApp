@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 public class myDatabase extends SQLiteOpenHelper {
 
     Context c;
-    public static String DBNAME="NTSINGAAPP";
+    public static String DBNAME="NTSHINGAAPP";
     public static int VERSION=2;
     public myDatabase(Context context){
         super(context, DBNAME, null, VERSION);
@@ -22,9 +22,17 @@ public class myDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
-            String query = "create table RECEPTIONISTdata (Name TEXT,Age INTEGER, Salary REAL, Email TEXT PRIMARY KEY, Password TEXT)";
+            //Receptionist Table
+            String query = "CREATE TABLE RECEPTIONISTdata (Name TEXT,Age INTEGER, Salary REAL, Email TEXT PRIMARY KEY, Password TEXT)";
             db.execSQL(query);
+
+            //Patients Table
+            String pquery = " CREATE TABLE PatientsBooking (foldenr TEXT,name TEXT, booking TEXT)";
+            db.execSQL(pquery);
+
             Toast.makeText(c,"Table Created Successfully", Toast.LENGTH_LONG).show();
+            Toast.makeText(c,"Table Created Successfully", Toast.LENGTH_LONG).show();
+
 
         } catch (Exception e) {
             Log.e("MYDATABASE", "Table Error",e);
@@ -67,4 +75,33 @@ public class myDatabase extends SQLiteOpenHelper {
 
     }
 
+    public boolean insertPatient(String foldernr, String patname, String booking ){
+
+        try {
+            String query="insert into PatientsBooking values('"+foldernr+"',"+patname+", "+booking+",)";
+            SQLiteDatabase db=getWritableDatabase();
+            db.execSQL(query);
+            Toast.makeText(c,patname+" Booking Saved Successfully", Toast.LENGTH_LONG).show();
+            return true;
+
+        } catch(Exception e) {
+            Log.e("MYDATABASE", "Booking Creation failed", e);
+            return false;
+        }
+    }
+
+    //Getting all patient Bookings
+    public Cursor getAllPatientsBooking() {
+        try {
+            String query = "Select foldenr,name, booking from PatientsBooking";
+            SQLiteDatabase db = getWritableDatabase();
+            Cursor c = db.rawQuery(query, null);
+            return c;
+
+
+        } catch (Exception e) {
+            Log.e("myDataBase", "getAllPatients Methods", e);
+            return null;
+        }
+    }
 }
