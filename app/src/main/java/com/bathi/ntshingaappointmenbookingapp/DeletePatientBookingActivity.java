@@ -49,11 +49,12 @@ public class DeletePatientBookingActivity extends AppCompatActivity {
             TextView patname = new TextView(this);
             patname.setText("  "+ pname);
             patname.setWidth(500);
-            myLayout.addView(patname);
+            ll.addView(patname);
 
             TextView booking = new TextView(this);
             booking.setWidth(140);
             booking.setText(pbooking);
+            ll.addView(booking);
 
             final String index = (String) fnr;
             int x=1;
