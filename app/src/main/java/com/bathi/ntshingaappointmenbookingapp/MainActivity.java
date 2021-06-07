@@ -30,8 +30,7 @@ static myDatabase myDB;
 
         //Validating Input Entries
       if(email.equals("")|| pass1.equals("'")){
-           // Toast.makeText(getApplicationContext(),"All Entries are Compulsory...", Toast.LENGTH_LONG).show();
-
+          Toast.makeText(getApplicationContext(),"All Entries are Compulsory...", Toast.LENGTH_LONG).show();
       }else {
 
             Cursor c = MainActivity.myDB.recLoginCheck(email);
