@@ -23,21 +23,21 @@ static myDatabase myDB;
         myDB=new myDatabase(this);
     }
 
-    //login logic for receptionist
+    //Sequence  for receptionist login asking user to enter email id
     public void loginCheck(View v){
         String email=name.getText().toString().trim();
         String pass1=pass.getText().toString().trim();
 
         //Validating Input Entries
-        if(email.equals("")|| pass1.equals("'")){
-            Toast.makeText(getApplicationContext(),"All Entries are Compulsory...", Toast.LENGTH_LONG).show();
+      if(email.equals("")|| pass1.equals("'")){
+           // Toast.makeText(getApplicationContext(),"All Entries are Compulsory...", Toast.LENGTH_LONG).show();
 
-        }else {
+      }else {
 
             Cursor c = MainActivity.myDB.recLoginCheck(email);
             c.moveToFirst();
             if (c == null) {
-                Toast.makeText(MainActivity.this, "Incorrect Details for" + email, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Incorrect Credentials for User" + email, Toast.LENGTH_LONG).show();
                 name.setText("");
                 pass.setText("");
             } else {
@@ -55,7 +55,7 @@ static myDatabase myDB;
             }
         }
     }
-//login for Receptionist Registration
+//Sequence for Receptionist Registration
     public void register (View v){
         Intent i = new Intent(MainActivity.this,RegistrationActivity.class);
         startActivity(i);

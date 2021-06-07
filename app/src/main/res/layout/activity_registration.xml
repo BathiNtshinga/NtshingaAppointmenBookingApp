@@ -14,7 +14,7 @@
         android:textSize="25dp"
         android:textStyle="bold"
         android:textColor="#005EFF"
-        android:text="BATHI, NTSHINGA"/>
+        android:text="REGISTRATION SCREEN"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
         android:textStyle="bold"
         android:textColor="#FF070F"
         android:inputType="numberDecimal"
-        android:hint="Input Salary"
+        android:hint="Enter Salary"
         />
     <EditText
         android:layout_width="match_parent"
@@ -84,6 +84,7 @@
         android:layout_height="wrap_content"
         android:onClick="goBack"
         android:text="Login"
+        android:textStyle="bold"
         android:textSize="24dp"
         android:textColor="#FF070F"
         />
@@ -94,6 +95,7 @@
         android:onClick="saveInfo"
         android:text="Register Receptionist"
         android:textSize="24dp"
+        android:textStyle="bold"
         android:textColor="#FF5722"/>
 
 

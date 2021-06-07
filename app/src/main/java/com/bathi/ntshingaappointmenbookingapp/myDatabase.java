@@ -23,7 +23,7 @@ public class myDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         try {
             //Receptionist Table
-            String query = "CREATE TABLE RECEPTIONISTdata (Name TEXT,Age INTEGER, Salary REAL, Email TEXT PRIMARY KEY, Password TEXT)";
+            String query = "create table RECEPTIONISTdata (Name TEXT,Age INTEGER, Salary REAL, Email TEXT PRIMARY KEY, Password TEXT)";
             db.execSQL(query);
 
             //Patients Table
@@ -51,7 +51,7 @@ public class myDatabase extends SQLiteOpenHelper {
             String query="insert into RECEPTIONISTdata values('"+name+"',"+age+", "+salary+", '"+email+"', '"+pass+"')";
             SQLiteDatabase db=getWritableDatabase();
             db.execSQL(query);
-            Toast.makeText(c,name+" Registration Success", Toast.LENGTH_LONG).show();
+            Toast.makeText(c,name+" Registered Successfully.. ", Toast.LENGTH_LONG).show();
             return true;
 
         } catch(Exception e) {
@@ -102,6 +102,22 @@ public class myDatabase extends SQLiteOpenHelper {
         } catch (Exception e) {
             Log.e("myDataBase", "getAllPatients Methods", e);
             return null;
+        }
+
+    }
+
+    public boolean removePatient(int foldernr ){
+
+        try {
+            String query="delete from PatientsBooking where ID="+foldernr;
+            SQLiteDatabase db=getWritableDatabase();
+            db.execSQL(query);
+            Toast.makeText(c,foldernr+" Patient Booking Deleted Successfully", Toast.LENGTH_LONG).show();
+            return true;
+
+        } catch(Exception e) {
+            Log.e("MYDATABASE", "Booking Creation failed", e);
+            return false;
         }
     }
 }

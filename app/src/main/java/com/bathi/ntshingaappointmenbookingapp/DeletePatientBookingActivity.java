@@ -70,7 +70,13 @@ public class DeletePatientBookingActivity extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Log.i("TAG", "index:" + index);
-                    Toast.makeText(getApplicationContext(), "Clicked Button Folder Number:" + index, Toast.LENGTH_LONG).show();
+                    boolean res = DeletePatientBookingActivity.myDB.removePatient(Integer.parseInt(index));
+                    if (res)
+                    Toast.makeText(getApplicationContext(), "Patient Booking Deleted" + index,
+                            Toast.LENGTH_LONG).show();
+                    else
+                        Toast.makeText(getApplicationContext(), "Student Deletion Failed!!!:" + index,
+                                Toast.LENGTH_LONG).show();
                 }
                 });
             ll.addView(btn);

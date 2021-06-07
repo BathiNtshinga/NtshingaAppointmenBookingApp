@@ -25,6 +25,7 @@ public class RegistrationActivity extends AppCompatActivity {
         ed5=(EditText)findViewById(R.id.password1);
     }
 
+    //Business Logic for calling insertData of myDatabase class
     public void saveInfo(View v){
         String name= ed1.getText().toString().trim();
         int age =Integer.parseInt(ed2.getText().toString().trim());
@@ -40,7 +41,7 @@ public class RegistrationActivity extends AppCompatActivity {
             boolean result = MainActivity.myDB.insertData(name, age, salary, email, pass);
 
             if (result) {
-                Toast.makeText(RegistrationActivity.this, name + " Register Success", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegistrationActivity.this, name + " Registered Successfully", Toast.LENGTH_LONG).show();
                 ed1.setText("");
                 ed2.setText("");
                 ed3.setText("");
@@ -51,14 +52,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 ad.show();
             }
             ed5.setText("");
-
         }
     }
 
     public void goBack(View v){
         Intent i = new Intent(RegistrationActivity.this,MainActivity.class);
         startActivity(i);
-
-
     }
 }

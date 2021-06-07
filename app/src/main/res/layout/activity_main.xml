@@ -19,8 +19,8 @@
         android:gravity="top|center"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="#005EFF"
-        android:text="REGISTRATION APP"/>
+        android:textColor="#050607"
+        android:text="APPOINTMENT BOOKING APP"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
         android:textStyle="bold"
         android:textColor="#FF070F"
         android:inputType="text"
-        android:hint="Input email address"
+        android:hint="Enter email address as Username"
         />
 
     <EditText
@@ -50,26 +50,33 @@
         android:textStyle="bold"
         android:textColor="#FF070F"
         android:inputType="textPassword"
-        android:hint="Input your password"
+        android:hint="Enter password"
         />
 
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
         android:onClick="loginCheck"
         android:text="Login"
-        android:textSize="24dp"
-        android:textColor="#FF070F"
+        android:textSize="18dp"
+        android:textColor="#030304"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
         android:onClick="register"
         android:text="Register Receptionist"
-        android:textSize="24dp"
+        android:textSize="20dp"
         android:textColor="#FF5722"
         />
+
+</LinearLayout>
 
 </LinearLayout>
