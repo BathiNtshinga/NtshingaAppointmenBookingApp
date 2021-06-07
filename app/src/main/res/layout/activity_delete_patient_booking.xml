@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/deletepatientbookingactivity"
+    android:layout_height="match_parent"
+    tools:context=".DeletePatientBookingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ntshinga Management Booking App"
+        android:textSize="25sp"
+        android:gravity="center|top"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Patient Booking Operation"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        />
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:text="Folder Number"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="140sp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Name of Patient"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Booking "
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Delete"
+                android:textColor="@color/black"
+                />
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

@@ -24,4 +24,9 @@ public class PatientsActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+
+    public void deletePatientBooking(View v){
+        Intent i = new Intent(PatientsActivity.this, DeletePatientBookingActivity.class);
+        startActivity(i);
+    }
 }

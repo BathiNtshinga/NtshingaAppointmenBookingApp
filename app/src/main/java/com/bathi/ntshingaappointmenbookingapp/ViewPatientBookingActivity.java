@@ -20,7 +20,7 @@ public class ViewPatientBookingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_patient_booking);
         final LinearLayout ll=(LinearLayout)findViewById(R.id.viewpatientbookingactivity);
-        myDB=new myDatabase(this);
+
 
         LinearLayout.LayoutParams params =new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
